@@ -127,7 +127,7 @@
         var data = this.sendQueue.shift();
 
         this.socket.send(
-          !this.isBinary ? (isString(data.message) ? data.message : JSON.stringify(data.message)) : data;
+          !this.isBinary ? (isString(data.message) ? data.message : JSON.stringify(data.message)) : data
         );
         data.deferred.resolve();
       }
